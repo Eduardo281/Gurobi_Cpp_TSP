@@ -1,0 +1,5 @@
+*.vcxproj
+*.sln
+/.vs
+/Gurobi_Cpp_TSP
+/x64
