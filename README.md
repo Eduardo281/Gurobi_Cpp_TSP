@@ -152,9 +152,13 @@ The type of the model to be built is passed as an argument to the factory method
 
 The three models available are based in the same common Assignment Problem 
 structure described below:
+
 $$\sum_{i=1}^n \sum_{j=1, j \neq i}^n c_{ij} x_{ij}.$$
+
 $$\sum_{i=1, i \neq j}^n x_{ij}, \quad j = 1, ..., n.$$
+
 $$\sum_{j=1, j \neq i}^n x_{ij}, \quad i = 1, ..., n.$$
+
 The standard objective function is designed to minimize the total route cost, 
 but it can be customized in the input data, as described above. The constraints
 means that every city must be visited and left once.
@@ -189,7 +193,9 @@ extra constraints set to the (AP), but in this case it will be necessary
 to add a new set of variables to.
 
 The new variables and constraints are:
+
 $$u_i - u_j + 1 \leqslant (n-1) (1 - x_{ij}), \quad i, j = 2, ..., n; i \neq j. $$
+
 $$2 \leqslant u_i \leqslant n, \quad i = 2, ..., n. $$
 
 An advantage of this formulation is the small number of variables and
@@ -203,7 +209,9 @@ Finally, the factory was coded to build the model by Gavish and Graves (1978)
 too. This is the earliest single commodity flow formulation, in which we need
 to add a new set of variables $g_{ij}$, for all $i, j \in V, i \neq j$. The new
 constraints sets are given by:
+
 $$\sum_{j=1}^n g_{ji} - \sum_{j=2}^n g_{ij} = 1, \quad i = 2, ..., n. $$
+
 $$0 \leqslant g_{ij} \leqslant (n-1) x_{ij}, \quad i = 1,...,n; \quad j = 2, ..., n.$$
 
 As in the MTZ formulation, here we are adding a set of $n^2$ variables, and just
