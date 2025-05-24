@@ -18,7 +18,7 @@ DISTANCE_TYPE distanceFunction_Euclidean(Point p1, Point p2) {
 	if (std::numeric_limits<DISTANCE_TYPE>::is_integer)
 		return static_cast<DISTANCE_TYPE>(std::sqrt(1.0 * result) + 0.5);
 	else
-	return std::sqrt(result);
+		return std::sqrt(result);
 }
 
 DISTANCE_TYPE distanceFunction_Manhattan(Point p1, Point p2) {
