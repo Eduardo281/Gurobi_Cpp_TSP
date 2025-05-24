@@ -3,7 +3,6 @@
 #include <string>
 #include <vector>
 
-// NOTE: Right now, both must have the same type. Future developments might allow different types!
 using COORDINATES_TYPE = double;
 using DISTANCE_TYPE    = double;
 

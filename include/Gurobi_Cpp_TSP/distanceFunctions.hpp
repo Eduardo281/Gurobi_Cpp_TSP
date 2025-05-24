@@ -38,7 +38,7 @@ DISTANCE_TYPE distanceFunction_Max(Point p1, Point p2) {
 		throw TSPDistanceFunctionBadInput();
 	}
 	for (size_t i{ 0 }; i < p1.getDimensions(); ++i) {
-		result = std::max(result, std::abs(p1.getCoordinateAt(i) - p2.getCoordinateAt(i)));
+		result = std::max(result, static_cast<DISTANCE_TYPE>(std::abs(p1.getCoordinateAt(i) - p2.getCoordinateAt(i))));
 	}
 	return result;
 }
